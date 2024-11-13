@@ -18,7 +18,7 @@ for dir_path in current_directory.rglob('*'):
                 #print(f"Found file: {compose_file}")
                 
                 # Define the destination path for the copied file
-                destination = new_folder / compose_file.name
+                destination = new_folder / dir_path / compose_file.name
                 
                 # Convert both paths to absolute paths to avoid issues with relative vs absolute paths
                 if compose_file.resolve() != destination.resolve():

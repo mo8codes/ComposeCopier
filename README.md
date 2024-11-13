@@ -4,11 +4,13 @@ Copies docker-compose.y(a)ml files into ../export_cc for your server distro hopp
 Instructions:
 Assuming this file structure:
 > ~/docker/*
+
 Where * are all the folders for each docker container.
 
 Run one of these commands to get the cc.py 
 
 > curl -O https://raw.githubusercontent.com/mo8codes/ComposeCopier/main/cc.py
+
 Alpine doesn't have curl by default but it does have wget so if curl doesn't work try this:
 > wget https://raw.githubusercontent.com/mo8codes/ComposeCopier/main/cc.py
 
@@ -23,4 +25,4 @@ You could also try this (untested and not reccomended):
 Finally
 > python3 ./cc.py
 
-Then all compose files should be in ~/export_cc
+Then all compose files should be in ~/export_cc/*/docker-compose.y\*ml
