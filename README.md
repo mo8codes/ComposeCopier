@@ -15,6 +15,8 @@ or
 
 > wget https://raw.githubusercontent.com/mo8codes/ComposeCopier/main/cc.py
 
+Finally:
 > python3 ./cc.py
 
-Then all compose files should be in ~/export_cc/*/docker-compose.y\*ml
+Now all compose files are in ~/export_cc/*/docker-compose.y\*ml
+![image](https://github.com/user-attachments/assets/7b7ad433-a334-4ac6-9717-3ddaceaa69b8)
