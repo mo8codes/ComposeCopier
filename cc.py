@@ -19,7 +19,8 @@ for dir_path in current_directory.rglob('*'):
                 
                 # Define the destination path for the copied file
                 destination = new_folder / dir_path / compose_file.name
-                
+                # Make new folder 
+                (new_folder / dir_path).mkdir(parents=True, exist_ok=True)
                 # Convert both paths to absolute paths to avoid issues with relative vs absolute paths
                 if compose_file.resolve() != destination.resolve():
                     # Copy the file to the new folder
