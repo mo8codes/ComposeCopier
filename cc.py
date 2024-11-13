@@ -1,10 +1,8 @@
 import shutil
 from pathlib import Path
 
-# Create new folder "./exported_compose_files"
-new_folder = Path('./exported_compose_files')
-
-# Create the folder if it doesn't already exist
+# Create new folder "./exported_compose_files" if it doesn't already exist
+new_folder = Path('../export_cc')
 new_folder.mkdir(parents=True, exist_ok=True)
 
 # Get the current working directory
@@ -17,7 +15,7 @@ for dir_path in current_directory.rglob('*'):
         for compose_file in dir_path.glob('docker-compose.y*ml'):
             if compose_file.is_file():
                 # Print to show that a docker-compose file was found
-                print(f"Found file: {compose_file}")
+                #print(f"Found file: {compose_file}")
                 
                 # Define the destination path for the copied file
                 destination = new_folder / compose_file.name
@@ -28,4 +26,4 @@ for dir_path in current_directory.rglob('*'):
                     shutil.copy(compose_file, destination)
                     print(f"Copied {compose_file} to {destination}")
                 else:
-                    print(f"Skipped copying {compose_file}, as it is already in the destination.")
+                    pass #print(f"Skipped copying {compose_file}, as it is already in the destination.")
